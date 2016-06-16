@@ -33,17 +33,17 @@
     <ComponentGroup Id="ProductComponents">
       <Component Id="VisualizerComponent" Guid="AAF92073-BB16-4DF6-8D6A-83B66D127020" Directory="DIR_Visualizers_VS2013">
         <File Source="$(var.TPLDataFlowDebuggerVisualizer.TargetPath)" />
-        <File Source="GraphSharp.Controls.dll" />
+       <!-- <File Source="GraphSharp.Controls.dll" />
         <File Source="GraphSharp.dll" />
         <File Source="Newtonsoft.Json.dll" />
         <File Source="RibbonControlsLibrary.dll" />
-        <File Source="System.Threading.Tasks.Dataflow.dll" />
+        <File Source="System.Threading.Tasks.Dataflow.dll" /> -->
       </Component>
-      <Component Id="IdeAssembliesComponent" Guid="CE3531DF-C1BB-45CA-A22B-44F86AE8A573" Directory="DIR_IDE_VS2013">
-        <File Source="QuickGraph.dll" />
-        <File Source="WPFExtensions.dll" />
+      <Component Id="IdeAssembliesComponent" Guid="CE3531DF-C1BB-45CA-A22B-44F86AE8A573" Directory="DIR_IDE_VS2015">
+      <!--  <File Source="QuickGraph.dll" />
+        <File Source="WPFExtensions.dll" /> -->
       </Component>
-      <Component Id="VSIXComponent" Guid="3DC2CA97-9992-4220-8742-58D141B00E6C" Directory="DIR_Extention_VS2013">
+      <Component Id="VSIXComponent" Guid="3DC2CA97-9992-4220-8742-58D141B00E6C" Directory="DIR_Extention_VS2015">
         <File Source="source.extension.vsixmanifest" />
       </Component>
     </ComponentGroup>
