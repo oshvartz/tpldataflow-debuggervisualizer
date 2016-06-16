@@ -1,0 +1,73 @@
+﻿<Window x:Class="TPLDataFlowDebuggerVisualizer.Views.ToolWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+        xmlns:zoom="clr-namespace:WPFExtensions.Controls;assembly=WPFExtensions"
+         xmlns:graphsharp="clr-namespace:GraphSharp.Controls;assembly=GraphSharp.Controls"
+        
+      xmlns:local="clr-namespace:TPLDataFlowDebuggerVisualizer.Common"
+        xmlns:view="clr-namespace:TPLDataFlowDebuggerVisualizer.Views"
+   Title="TPL dataflow schema"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Window.Resources>
+        <view:IsFirstBlockValueConverter x:Key="PositionConverter" />
+        <DataTemplate DataType="{x:Type local:DataFlowDebuggerInfo}">
+            <Border BorderBrush="Black" BorderThickness="2" CornerRadius="1">
+                <Expander Header="{Binding BlockType}" Background="{Binding Path=IsFirstBlock, Converter={StaticResource PositionConverter}}" Expanded="OnItemExpanded"  Collapsed="expanderHasCollapsed" >
+                    <Grid Background="{Binding Path=IsFirstBlock, Converter={StaticResource PositionConverter}}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.1*" />
+                            <RowDefinition Height="0.1*" />
+                            <RowDefinition Height="0.1*" />
+                            <RowDefinition Height="0.1*" />
+                            <RowDefinition Height="0.1*" />
+                            <RowDefinition Height="0.1*" />
+                            <RowDefinition Height="0.1*" />
+                            <RowDefinition Height="0.1*" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0">Id:</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding Id}" />
+                        <TextBlock Grid.Column="0" Grid.Row="1">IsCompleted:</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding IsCompleted}" />
+                        <TextBlock Grid.Column="0" Grid.Row="2">IsDecliningPermanently:</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding IsDecliningPermanently}" />
+                        <TextBlock Grid.Column="0" Grid.Row="3">InputQueueLength:</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding InputQueueLength}" />
+                        <TextBlock Grid.Column="0" Grid.Row="4">OutputQueueLength:</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="4" Text="{Binding OutputQueueLength}" />
+                        <TextBlock Grid.Column="0" Grid.Row="5">BoundedCapacity:</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="5" Text="{Binding BoundedCapacity}" />
+                        <TextBlock Grid.Column="0" Grid.Row="6">MaxMessagesPerTask:</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="6" Text="{Binding MaxMessagesPerTask}" />
+                        <TextBlock Grid.Column="0" Grid.Row="7">CurrentDegreeOfParallelism:</TextBlock>
+                        <TextBlock Grid.Column="1" Grid.Row="7" Text="{Binding CurrentDegreeOfParallelism}" />
+                    </Grid>
+                </Expander>
+            </Border>
+        </DataTemplate>
+
+
+
+
+    </Window.Resources>
+    <Grid>
+        
+        <zoom:ZoomControl>
+            <view:DataFlowGraphLayout x:Name="Graph" 
+                                    Graph="{Binding Path=GraphToVisualize}"
+                                    LayoutAlgorithmType="FR"
+                                  
+                                    OverlapRemovalAlgorithmType="FSA"
+                                    HighlightAlgorithmType="Simple">
+
+            </view:DataFlowGraphLayout>
+        </zoom:ZoomControl>
+      
+    </Grid>
+</Window>
