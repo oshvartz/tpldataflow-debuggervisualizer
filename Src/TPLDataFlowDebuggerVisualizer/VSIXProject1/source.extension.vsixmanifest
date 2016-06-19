@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
     <Identity Id="TPLDataFlowDebuggerVisualizer.Offir Shvartz.4a890fe1-fa4c-452e-96c2-cf7a3a1a194c" Version="1.0" Language="en-US" Publisher="Offir Shvartz" />
@@ -7,7 +7,7 @@
     <MoreInfo>https://github.com/oshvartz/tpldataflow-debuggervisualizer</MoreInfo>
   </Metadata>
   <Installation InstalledByMsi="true">
-    <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Community" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,15.0)" />
     <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Pro" />
     <InstallationTarget Version="[14.0,15.0)" Id="Microsoft.VisualStudio.Enterprise" />
   </Installation>

@@ -28,9 +28,15 @@
     <Compile Include="Product.wxs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GraphSharp.Controls.dll" />
+    <Content Include="GraphSharp.dll" />
+    <Content Include="Newtonsoft.Json.dll" />
+    <Content Include="QuickGraph.dll" />
     <Content Include="source.extension.vsixmanifest">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="System.Threading.Tasks.Dataflow.dll" />
+    <Content Include="WPFExtensions.dll" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TPLDataFlowDebuggerVisualizer\TPLDataFlowDebuggerVisualizer.csproj">

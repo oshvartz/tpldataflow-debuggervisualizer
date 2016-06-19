@@ -13,35 +13,34 @@
 
   <Fragment>
     <Directory Id="TARGETDIR" Name="SourceDir">
-      <Directory Id="DIR_IDE_VS2013" />
-      <Directory Id="DIR_Visualizers_VS2013" />
-      <Directory Id="DIR_Extention_VS2013" />
+      <Directory Id="DIR_IDE_VS2015" />
+      <Directory Id="DIR_Visualizers_VS2015" />
+      <Directory Id="DIR_Extention_VS2015" />
 
     </Directory>
-    <PropertyRef Id='VS2013_ROOT_FOLDER'/>
-    <SetDirectory Id="DIR_IDE_VS2013" Value="[VS2013_ROOT_FOLDER]\Common7\IDE\PublicAssemblies" Sequence="both" />
-    <PropertyRef Id='VS2013_ROOT_FOLDER'/>
-    <SetDirectory Id="DIR_Visualizers_VS2013" Value="[VS2013_ROOT_FOLDER]\Common7\Packages\Debugger\Visualizers" Sequence="both" />
+    <PropertyRef Id='VS2015_ROOT_FOLDER'/>
+    <SetDirectory Id="DIR_IDE_VS2015" Value="[VS2015_ROOT_FOLDER]\Common7\IDE\PublicAssemblies" Sequence="both" />
+    <PropertyRef Id='VS2015_ROOT_FOLDER'/>
+    <SetDirectory Id="DIR_Visualizers_VS2015" Value="[VS2015_ROOT_FOLDER]\Common7\Packages\Debugger\Visualizers" Sequence="both" />
 
-    <PropertyRef Id='VS2013_ROOT_FOLDER'/>
-    <SetDirectory Id="DIR_Extention_VS2013" Value="[VS2013_ROOT_FOLDER]\Common7\Ide\Extensions\Oshvartz\TPLDataFlowDebuggerVisualizer\1.0.0" Sequence="both" />
+    <PropertyRef Id='VS2015_ROOT_FOLDER'/>
+    <SetDirectory Id="DIR_Extention_VS2015" Value="[VS2015_ROOT_FOLDER]\Common7\Ide\Extensions\Oshvartz\TPLDataFlowDebuggerVisualizer\1.0.0" Sequence="both" />
 
 
   </Fragment>
 
   <Fragment>
     <ComponentGroup Id="ProductComponents">
-      <Component Id="VisualizerComponent" Guid="AAF92073-BB16-4DF6-8D6A-83B66D127020" Directory="DIR_Visualizers_VS2013">
+      <Component Id="VisualizerComponent" Guid="AAF92073-BB16-4DF6-8D6A-83B66D127020" Directory="DIR_Visualizers_VS2015">
         <File Source="$(var.TPLDataFlowDebuggerVisualizer.TargetPath)" />
-       <!-- <File Source="GraphSharp.Controls.dll" />
+        <File Source="GraphSharp.Controls.dll" />
         <File Source="GraphSharp.dll" />
         <File Source="Newtonsoft.Json.dll" />
-        <File Source="RibbonControlsLibrary.dll" />
-        <File Source="System.Threading.Tasks.Dataflow.dll" /> -->
+        <File Source="System.Threading.Tasks.Dataflow.dll" /> 
       </Component>
       <Component Id="IdeAssembliesComponent" Guid="CE3531DF-C1BB-45CA-A22B-44F86AE8A573" Directory="DIR_IDE_VS2015">
-      <!--  <File Source="QuickGraph.dll" />
-        <File Source="WPFExtensions.dll" /> -->
+        <File Source="QuickGraph.dll" />
+        <File Source="WPFExtensions.dll" /> 
       </Component>
       <Component Id="VSIXComponent" Guid="3DC2CA97-9992-4220-8742-58D141B00E6C" Directory="DIR_Extention_VS2015">
         <File Source="source.extension.vsixmanifest" />
