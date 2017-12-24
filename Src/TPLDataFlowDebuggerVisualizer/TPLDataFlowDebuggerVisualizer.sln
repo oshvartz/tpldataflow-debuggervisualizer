@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPLDataFlowDebuggerVisualizer", "TPLDataFlowDebuggerVisualizer\TPLDataFlowDebuggerVisualizer.csproj", "{7761A6F1-8120-47BD-B987-C49FB0DD18CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPLDataFlowDebuggerVisualizer.Tester", "TPLDataFlowDebuggerVisualizer.Tester\TPLDataFlowDebuggerVisualizer.Tester.csproj", "{131ECE0C-FABE-44BF-BD89-13505BD93760}"
 EndProject
-Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "TPLDataFlowDebuggerVisualizerSetup", "TPLDataFlowDebuggerVisualizerSetup\TPLDataFlowDebuggerVisualizerSetup.wixproj", "{AE49BFBA-8668-4C19-98CA-AEEC224B94EC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VSIXTPLDataFlowDebuggerVisualizer", "VSIXTPLDataFlowDebuggerVisualizer\VSIXTPLDataFlowDebuggerVisualizer.csproj", "{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,18 +39,23 @@ Global
 		{131ECE0C-FABE-44BF-BD89-13505BD93760}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{131ECE0C-FABE-44BF-BD89-13505BD93760}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{131ECE0C-FABE-44BF-BD89-13505BD93760}.Release|x86.ActiveCfg = Release|Any CPU
-		{AE49BFBA-8668-4C19-98CA-AEEC224B94EC}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{AE49BFBA-8668-4C19-98CA-AEEC224B94EC}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{AE49BFBA-8668-4C19-98CA-AEEC224B94EC}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{AE49BFBA-8668-4C19-98CA-AEEC224B94EC}.Debug|x86.ActiveCfg = Debug|x86
-		{AE49BFBA-8668-4C19-98CA-AEEC224B94EC}.Debug|x86.Build.0 = Debug|x86
-		{AE49BFBA-8668-4C19-98CA-AEEC224B94EC}.Release|Any CPU.ActiveCfg = Release|x86
-		{AE49BFBA-8668-4C19-98CA-AEEC224B94EC}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{AE49BFBA-8668-4C19-98CA-AEEC224B94EC}.Release|Mixed Platforms.Build.0 = Release|x86
-		{AE49BFBA-8668-4C19-98CA-AEEC224B94EC}.Release|x86.ActiveCfg = Release|x86
-		{AE49BFBA-8668-4C19-98CA-AEEC224B94EC}.Release|x86.Build.0 = Release|x86
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Debug|x86.Build.0 = Debug|Any CPU
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Release|x86.ActiveCfg = Release|Any CPU
+		{CEF838AB-2EB1-4B6B-A0CC-7D2F0E2B4CDE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80C5BDE9-D219-4EA4-9311-655A2EA80656}
 	EndGlobalSection
 EndGlobal

@@ -111,11 +111,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)\*.dll" "$(DevEnvDir)\..\Packages\Debugger\Visualizers\." /Y
-IF NOT EXIST "$(DevEnvDir)\PublicAssemblies\QuickGraph.dll" copy "$(TargetDir)\QuickGraph.dll" "$(DevEnvDir)\PublicAssemblies\." /Y
-IF NOT EXIST "$(DevEnvDir)\PublicAssemblies\WPFExtensions.dll" copy "$(TargetDir)\WPFExtensions.dll" "$(DevEnvDir)\PublicAssemblies\." /Y
-
-</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
