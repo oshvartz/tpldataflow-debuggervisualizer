@@ -27,7 +27,7 @@ namespace TPLDataFlowDebuggerVisualizer.Views
             InitializeComponent();
            
         }
-        DispatcherTimer _timer = new DispatcherTimer() { Interval = TimeSpan.FromSeconds(.5) };
+        DispatcherTimer _timer = new DispatcherTimer() { Interval = TimeSpan.FromSeconds(1) };
 
         private void expanderHasCollapsed(object sender, RoutedEventArgs args)
         {
