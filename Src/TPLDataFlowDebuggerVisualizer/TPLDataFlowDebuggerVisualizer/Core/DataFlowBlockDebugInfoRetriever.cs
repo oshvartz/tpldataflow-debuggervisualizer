@@ -120,11 +120,11 @@ namespace TPLDataFlowDebuggerVisualizer.Core
 
         private static IDataflowBlock RetrieveJoinBlock(IDataflowBlock dataflowBlock)
         {
-            var joinTargetType = dataflowBlock.GetType().GetField("m_sharedResources", BindingFlags.NonPublic | BindingFlags.Instance);
+            var joinTargetType = dataflowBlock.GetType().GetField("_sharedResources", BindingFlags.NonPublic | BindingFlags.Instance);
             Debug.Assert(joinTargetType != null, "joinTargetType != null");
 
             // ReSharper disable PossibleNullReferenceException
-            var joinSourceField = joinTargetType.FieldType.GetField("m_ownerJoin", BindingFlags.NonPublic | BindingFlags.Instance);
+            var joinSourceField = joinTargetType.FieldType.GetField("_ownerJoin", BindingFlags.NonPublic | BindingFlags.Instance);
 
             var sharedResources = joinTargetType.GetValue(dataflowBlock);
 
