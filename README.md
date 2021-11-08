@@ -1,7 +1,7 @@
 # TPL DataFlow Debugger Visualizer
 Enables you to view a graphic view (integrated in VS 2019) of your TPL data flow network including the state of each block
 
-![alt text for screen readers](img/tpldataflow.png)
+![alt text for screen readers](./img/tpldataflow.png)
 
 # versions supported
  **System.Threading.Tasks.Dataflow** version >= 4.9
