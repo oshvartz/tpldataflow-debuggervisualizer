@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <AssemblyTitle>TPLSimpleExample</AssemblyTitle>
     <Product>TPLSimpleExample</Product>
     <Copyright>Copyright ©  2012</Copyright>
@@ -9,11 +9,5 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="System.Threading.Tasks.Dataflow" Version="4.9.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System.Runtime" />
-    <Reference Include="System.Threading.Tasks" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
 </Project>
